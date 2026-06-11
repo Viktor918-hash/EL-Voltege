@@ -1,0 +1,14 @@
+.btn--big {
+    display: flex;
+    align-items: center;
+    padding: 12px 38px;
+    background-color: #E9FF61;
+    font-size: 18px;
+    transition: 0.4ms ease;
+    gap: 5px;
+}
+
+.btn--big:hover {
+    background: #000;
+    color: #e9ff61;
+}
