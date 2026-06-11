@@ -7,7 +7,8 @@ const Navbar = () => {
         <div className="header__container">
           <a href="#">
             <img
-              src="/icon/logo.svg"
+              src="/icon/logo.png"
+              srcSet="/icon/logo@2x.png 2x"
               alt="EvVoltege"
               className="header__logo"
             />
