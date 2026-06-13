@@ -1,0 +1,144 @@
+.reserve {
+    padding-top: 130px;
+    margin-bottom: 130px;
+}
+
+.container {}
+
+.reserve__content {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+
+}
+
+.reserve__title {
+    font-size: 42px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.reserve__input-grup {
+    max-width: 505px;
+
+}
+
+.input__name-cnt {
+    display: flex;
+    gap: 20px;
+    max-width: 505px;
+    margin-bottom: 20px;
+}
+
+.input__name-firstname {
+    display: flex;
+    flex-direction: column;
+    width: 505px;
+}
+
+.label__name {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.input__first-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #999999;
+    width: 100%;
+    padding: 12px;
+    background-color: #EDF2F6;
+}
+
+.label__last-name {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+
+.input__last-name {
+    font-size: 18px;
+    color: #999999;
+    width: 100%;
+    padding: 12px;
+    background-color: #EDF2F6;
+}
+
+.input__email-massage {
+    display: flex;
+    flex-direction: column;
+}
+
+.label__email {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.input__email {
+    max-width: 504px;
+    padding: 12px;
+    background-color: #EDF2F6;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #999999;
+}
+
+.label__massage {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.input__massage {
+    max-width: 504px;
+    padding: 12px 12px 84px 12px;
+    background-color: #EDF2F6;
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.reservt__btn {
+    font-size: 18px;
+    color: #E9FF61;
+    padding: 18px 24px;
+    background-color: #000000;
+}
+
+.reservt__btn:hover {
+    color: #000000;
+    background-color: #E9FF61;
+}
+
+.input__img {
+    max-width: 735px;
+    width: 100%;
+    height: auto;
+    display: block;
+
+
+}
+
+@media (max-width: 768px) {
+    .reserve__content {
+        flex-direction: column;
+    }
+
+    .input__img {
+        width: 100%;
+        flex: none;
+
+    }
+
+    .reserve__input-grup {
+        order: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}

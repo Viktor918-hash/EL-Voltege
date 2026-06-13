@@ -51,7 +51,7 @@
 }
 
 
-li::after {
+.header__link::after {
     content: '';
     position: absolute;
     left: 50%;

@@ -4,6 +4,9 @@ import Hero from "./components/Hero/Hero";
 import Discover from "./components/Discover/Discover";
 import Story from "./components/OurStory/Story";
 import Power from "./components/Power/Power";
+import Sviper from "./components/Swiper/Sviper";
+import Reserve from "./components/Reserve/Reserve";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <Discover />
       <Story />
       <Power />
+      <Sviper />
+      <Reserve />
+      <Footer />
     </div>
   );
 }
