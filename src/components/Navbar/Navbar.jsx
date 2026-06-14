@@ -2,9 +2,11 @@ import "./mobile-btn.css";
 import "./navbar.css";
 import { ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import Modal from "../OrderNov-Btn/Modal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleNav = () => setIsOpen(!isOpen);
 
@@ -40,7 +42,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button className="header__btn">
+          <button className="header__btn" onClick={() => setIsModalOpen(true)}>
             Order Now
             <ArrowUpRight size={24} strokeWidth={1.5} />
           </button>
@@ -69,7 +71,11 @@ const Navbar = () => {
             <a href="#">Gear Shop</a>
           </li>
         </ul>
-        <a href="#" className="mobile__big-btn">
+        <a
+          href="#"
+          className="mobile__big-btn"
+          onClick={() => setIsModalOpen(true)}
+        >
           Order Now
           <ArrowUpRight size={24} strokeWidth={1.5} />{" "}
         </a>
@@ -79,6 +85,7 @@ const Navbar = () => {
         className={`mobile-nav-fade ${isOpen ? "mobile-nav-fade--open" : ""}`}
         onClick={toggleNav}
       />
+      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
     </header>
   );
 };
