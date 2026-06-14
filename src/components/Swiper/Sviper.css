@@ -36,7 +36,7 @@
 .swiper {
     width: 100vw;
     position: relative;
-    left: 55%;
+    left: 50%;
     transform: translateX(-50%);
     --swiper-pagination-bullet-size: 10px;
     --swiper-theme-color: #000;
