@@ -20,14 +20,16 @@ const Discover = () => {
               alt=""
               className="description__img"
             />
-            <h3 className="description__title">Home Smart Charger</h3>
-            <div className="description__text">
-              Charger A lightweight, travel-friendly Level 1 charger designed
-              for convenience. Plugs into standard wall outlets.
-            </div>
-            <div className="dexcription__price">
-              <div className="price1">$999</div>
-              <div className="price2">$599</div>
+            <div className="description__text-content">
+              <h3 className="description__title">Home Smart Charger</h3>
+              <div className="description__text">
+                Charger A lightweight, travel-friendly Level 1 charger designed
+                for convenience. Plugs into standard wall outlets.
+              </div>
+              <div className="dexcription__price">
+                <div className="price1">$999</div>
+                <div className="price2">$599</div>
+              </div>
             </div>
           </div>
           <div className="discover__description">
@@ -37,14 +39,16 @@ const Discover = () => {
               alt=""
               className="description__img"
             />
-            <h3 className="description__title">Portable EV Charger</h3>
-            <div className="description__text">
-              A lightweight, travel-friendly Level 1 charger designed for
-              convenience. Plugs into standard wall outlets.
-            </div>
-            <div className="dexcription__price">
-              <div className="price1">$599</div>
-              <div className="price2">$299</div>
+            <div className="description__text-content">
+              <h3 className="description__title">Portable EV Charger</h3>
+              <div className="description__text">
+                A lightweight, travel-friendly Level 1 charger designed for
+                convenience. Plugs into standard wall outlets.
+              </div>
+              <div className="dexcription__price">
+                <div className="price1">$599</div>
+                <div className="price2">$299</div>
+              </div>
             </div>
           </div>
           <div className="discover__description">
@@ -54,16 +58,18 @@ const Discover = () => {
               alt=""
               className="description__img"
             />
-            <h3 className="description__title">
-              Ultra-Fast Public Charging Station
-            </h3>
-            <div className="description__text">
-              Level 3 DC fast charger for public and commercial locations.
-              Equipped with dual ports.
-            </div>
-            <div className="dexcription__price">
-              <div className="price1">$20,999</div>
-              <div className="price2">$12,999</div>
+            <div className="description__text-content">
+              <h3 className="description__title">
+                Ultra-Fast Public Charging Station
+              </h3>
+              <div className="description__text">
+                Level 3 DC fast charger for public and commercial locations.
+                Equipped with dual ports.
+              </div>
+              <div className="dexcription__price">
+                <div className="price1">$20,999</div>
+                <div className="price2">$12,999</div>
+              </div>
             </div>
           </div>
         </div>

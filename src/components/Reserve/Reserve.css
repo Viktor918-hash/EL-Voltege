@@ -1,13 +1,14 @@
 .reserve {
-    padding-top: 130px;
-    margin-bottom: 130px;
+    padding-top: clamp(1.875rem, -0.398rem + 11.36vw, 8.125rem);
+    margin-bottom: clamp(1.875rem, -0.398rem + 11.36vw, 8.125rem);
 }
 
 .container {}
 
 .reserve__content {
     display: flex;
-    gap: 23px;
+    justify-content: space-between;
+    gap: 15px;
     align-items: center;
 
 }
@@ -118,14 +119,14 @@
 
 .input__img {
     max-width: 735px;
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
 
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .reserve__content {
         flex-direction: column;
     }
@@ -139,6 +140,17 @@
     .reserve__input-grup {
         order: 0;
         max-width: 100%;
+        width: 100%;
+    }
+
+    .input__name-cnt,
+    .input__email,
+    .input__massage {
+        max-width: unset;
+    }
+
+    .reservt__btn {
+        display: block;
         width: 100%;
     }
 }

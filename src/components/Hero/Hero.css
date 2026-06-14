@@ -24,8 +24,8 @@
     grid-template-columns: repeat(3, auto);
     place-items: center;
     gap: 50px;
-    margin-top: 75px;
-    padding: 75px 0px 0px;
+    margin-top: clamp(2rem, 1.023rem + 4.89vw, 4.688rem);
+    padding-top: clamp(2rem, 1.023rem + 4.89vw, 4.688rem);
     border-top: 1px solid #E9E9E9;
 
 }
@@ -39,7 +39,7 @@
 }
 
 .dateile__value {
-    font-size: clamp(1.5rem, 0.227rem + 6.36vw, 5.5rem);
+    font-size: clamp(1.875rem, 0.739rem + 5.68vw, 5rem);
     font-weight: 600;
     text-transform: uppercase;
     font-variant-numeric: lining-nums tabular-nums;
@@ -69,7 +69,14 @@
         justify-self: center;
     }
 
-    .dateile__value {
-        font-size: 60px;
+    .dateile__desc {
+        font-weight: 300;
+    }
+
+}
+
+@media (max-width:550px) {
+    .container {
+        padding: 0px 10px;
     }
 }

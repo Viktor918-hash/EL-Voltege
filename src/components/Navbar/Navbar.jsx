@@ -1,6 +1,17 @@
+import "./mobile-btn.css";
 import "./navbar.css";
 import { ArrowUpRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    document.body.classList.toggle("no-scroll", isOpen);
+  }, [isOpen]);
+
   return (
     <header className="header">
       <div className="container header--wrapper">
@@ -29,12 +40,45 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button className="header__btn ">
+          <button className="header__btn">
             Order Now
             <ArrowUpRight size={24} strokeWidth={1.5} />
           </button>
+          <button className="mobile-nav-btn" onClick={toggleNav}>
+            <div
+              className={`nav-icon ${isOpen ? "nav-icon--active" : ""}`}
+            ></div>
+          </button>
         </div>
       </div>
+
+      <nav className={`mobile-nav ${isOpen ? "mobile-nav--open" : ""}`}>
+        <ul className="mobile-nav__list">
+          <li>
+            <a href="#" className="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Gear Shop</a>
+          </li>
+        </ul>
+        <a href="#" className="mobile__big-btn">
+          Order Now
+          <ArrowUpRight size={24} strokeWidth={1.5} />{" "}
+        </a>
+      </nav>
+
+      <div
+        className={`mobile-nav-fade ${isOpen ? "mobile-nav-fade--open" : ""}`}
+        onClick={toggleNav}
+      />
     </header>
   );
 };

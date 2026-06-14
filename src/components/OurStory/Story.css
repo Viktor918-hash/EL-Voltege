@@ -4,7 +4,7 @@
 
 .story--page {
     max-width: 1280px;
-    padding-bottom: 128px;
+    padding-bottom: clamp(1.875rem, -0.352rem + 11.14vw, 8rem);
 }
 
 .story__text {
@@ -25,12 +25,12 @@
 .story__title--text {
     display: flex;
     gap: 60px;
-    padding-top: 36px;
-    padding-bottom: 60px;
+    padding-top: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem);
+    padding-bottom: clamp(1.563rem, 0.767rem + 3.98vw, 3.75rem);
 }
 
 .story__power {
-    font-size: 60px;
+    font-size: clamp(2rem, 1.364rem + 3.18vw, 3.75rem);
     color: #000000;
     text-transform: capitalize;
 }
@@ -38,7 +38,7 @@
 .story__description {
     max-width: 344px;
     color: #999999;
-    font-size: 18px;
+    font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
 
 }
 
@@ -97,13 +97,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+
 }
 
 .story__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     filter: brightness(60%);
-    max-width: 100%;
-    max-height: 100%s;
+
 }
 
 .story__text--blure {
@@ -113,7 +116,6 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgb(255, 255, 255, 0.5);
     --offset: 24px;
-    position: absolute;
     left: var(--offset);
     right: var(--offset);
     bottom: var(--offset);
@@ -129,4 +131,68 @@
     padding-bottom: 32px;
     font-size: 18px;
     color: #E9E9E9;
+}
+
+
+@media (max-width: 901px) {
+    .story__text--blure {
+        --offset: 14px;
+        padding: 16px;
+    }
+
+    .blure__title {
+        font-size: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+        padding-bottom: 6px;
+    }
+
+    .blure__text {
+        font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem);
+        padding-bottom: 16px;
+    }
+
+    .story__title--text {
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .story__paragraf {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 901px) {
+    .story__title--text {
+        flex-direction: column;
+    }
+
+    .story__description {
+        max-width: unset;
+        font-size: 16px;
+    }
+
+    .content__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .story__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content__title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .story__description {
+
+        font-size: 14px;
+    }
+
+    .content__text {
+        font-size: 14px;
+    }
 }

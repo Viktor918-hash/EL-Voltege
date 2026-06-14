@@ -1,4 +1,6 @@
-.discover__page {}
+.discover__page {
+    padding-bottom: clamp(2rem, -0.182rem + 10.91vw, 8rem);
+}
 
 .container {}
 
@@ -9,7 +11,7 @@
 .power {
     display: flex;
     justify-content: center;
-    padding-top: 140px;
+    padding-top: clamp(1.875rem, -0.625rem + 12.5vw, 8.75rem);
 }
 
 
@@ -17,17 +19,17 @@
     text-align: center;
     background-color: #EDF2F6;
     color: #000;
-    font-size: 18px;
+    font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
     padding: 10px 20px;
     text-transform: capitalize;
 }
 
 .discvoer__title {
-    font-size: 60px;
+    font-size: clamp(2rem, 1.364rem + 3.18vw, 3.75rem);
     text-align: center;
     color: #000;
     padding-top: 16px;
-    padding-bottom: 45px;
+    padding-bottom: clamp(1.563rem, 1.108rem + 2.27vw, 2.813rem);
     text-transform: capitalize;
 }
 
@@ -42,10 +44,17 @@
 
 .discover__description {
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.description__img {}
+
+
+.description__text-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 .description__title {
     font-size: 24px;
@@ -63,8 +72,9 @@
 .dexcription__price {
     display: flex;
     gap: 9px;
-    font-size: 24px;
-    padding-bottom: 128px;
+    font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+    margin-top: auto;
+
 }
 
 .price1 {
@@ -73,4 +83,52 @@
 
 .price2 {
     color: #000;
+}
+
+
+@media(max-width:1157px) {
+    .discover__description:not(:last-child) .description__title {
+        max-width: 150px;
+    }
+}
+
+@media (max-width:992px) {
+    .discover__power {
+        padding: 8px 12px;
+    }
+
+    .discover__img--content {
+        gap: 10px
+    }
+
+    .description__text {
+        font-size: 16px;
+        /* padding: 10px 0px; */
+    }
+
+    .discover__description:not(:last-child) .description__title {
+        max-width: 150px;
+    }
+}
+
+
+@media(max-width:768px) {
+    .description__text {
+        font-size: 14px;
+        padding: 8px 0px;
+    }
+
+    .description__title {
+        padding: 10px 0px 5px 0px;
+    }
+}
+
+@media(max-width:475px) {
+    .discover__img--content {
+        flex-direction: column;
+    }
+
+    .discover__description:not(:last-child) .description__title {
+        max-width: 300px;
+    }
 }
